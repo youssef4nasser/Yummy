@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>Yummy</title>
+    <!-- WoW animate css -->
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <!-- font Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Main css style -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="side-nav bg-white min-vh-100 position-fixed d-flex top-0 z-3">
+        <div class="nav-tab bg-dark p-4 d-flex flex-column justify-content-between">
+            <div class="links animate__animated animate__slow">
+                <ul class="list-unstyled overflow-hidden">
+                    <li onclick="showSearchInputs()" class="py-2 position-relative"><a class="text-decoration-none text-white" href="#">Search</a></li>
+                    <li onclick="getMealCategoryApi()" class="py-2 position-relative"><a class="text-decoration-none text-white" href="#">Categories</a></li>
+                    <li onclick="getApiArea()" class="py-2 position-relative"><a class="text-decoration-none text-white" href="#">Area</a></li>
+                    <li onclick="getApiIngredients()" class="py-2 position-relative"><a class="text-decoration-none text-white" href="#">Ingredients</a></li>
+                    <li onclick="showContactUs()" class="py-2 position-relative"><a class="text-decoration-none text-white" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <ul class="list-unstyled d-flex mb-0">
+                    <li class="px-1"><i class="fa-brands fa-facebook"></i></li>
+                    <li class="px-1"><i class="fa-brands fa-twitter"></i></li>
+                    <li class="px-1"><i class="fa-solid fa-globe"></i></li>
+                </ul>
+                <p>Copyright Â© 2019 All Rights <br> Reserved.</p>
+            </div>
+        </div>
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img  class="logo" src="./images/logo.png" alt="logo">
+            <i id="btn-menue" class="fa-solid fa-bars fa-2x"></i>
+            <div class="d-flex flex-column">
+                <a class="text-black" href="#"><i class="fa-solid fa-globe"></i></a>
+                <a class="text-black" href="#"><i class="fa-solid fa-square-share-nodes"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row showSearchInput mb-4 ">
+                
+            </div>
+            <div class="row show-meals gy-3">
+                <!-- <div class="col-md-3">
+                    <div>
+                        <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                        <h3>test</h3>
+                        <p>sldkfja;lkfj;lkjsadf;kljl;ljskdflkjskldjffsdjfsjfoisjdfoisjf</p>
+                    </div>
+                </div> -->
+                <!-- <div class="contact-us text-center">
+                    <div class="container">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Enter your Name" aria-label="First name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Enter you Email" aria-label="Last name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Enter you Phone" aria-label="First name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Enter you Age" aria-label="Last name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Enter you Password" aria-label="First name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="RePassword" aria-label="Last name">
+                            </div>
+                        </div>
+                        <button class="btn btn-danger mt-3">Submit</button>
+                    </div>
+                </div> -->
+                <!-- <div class="details">
+                    <div class="container">
+                        <div class="row gx-5">
+                          <div class="col-md-4">
+                            <div class="img-game">
+                              <img class="w-100" src="./images/xvsurr1511719182.jpg" alt="img-game">
+                            </div>
+                            <h2 class="text-white mb-4">Apple & Blackberry Crumble</h2>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="Details-game text-white">
+                              <h3 class="mb-4">Instructions</h3>
+                              <p>The demon fighting doesn’t have to stop when you walk away from the computer thanks to Blizzard Entertainment’s Diablo Immortal. Built for mobile and also released on PC, the game fills in the gaps between Diablo II and III in an MMOARPG environment. Diablo Immortal picks up following the presumed death of the Archangel Tyrael, during which time mankind must deal with the fallout. One of the many problems are the fragments of the shattered Worldstone spread across the land, waiting for Diablo’s underlings to collect them in an attempt to bring about his return. Players can choose from one of six classes in Diablo Immortal. These are the classic Barbarian, the Crusader, the Demon Hunter, the Monk, the Necromancer, and the Wizard. All six classes features their own unique skills and abilities. The game also introduces six new bosses, ranging from The Skeleton King to the Glacial Colossus. Each offers players a unique challenge, and all are found in places filled with danger. So, players will want to be well prepared before taking them on.</p>
+                              <h3>Area : <span>British</span></h3>
+                              <h3>Category : <span>Dessert</span></h3>
+                              <h3>Recipes : </h3>
+                              <ul class="d-flex list-unstyled flex-wrap">
+                                <li class="p-1 bg-info rounded-2 text-black m-2">120g Plain Flour</li>
+                                <li class="p-1 bg-info rounded-2 text-black m-2">120g Plain Flour</li>
+                                <li class="p-1 bg-info rounded-2 text-black m-2">120g Plain Flour</li>
+                                <li class="p-1 bg-info rounded-2 text-black m-2">120g Plain Flour</li>
+                                <li class="p-1 bg-info rounded-2 text-black m-2">120g Plain Flour</li>
+                                <li class="p-1 bg-info rounded-2 text-black m-2">120g Plain Flour</li>
+                                <li class="p-1 bg-info rounded-2 text-black m-2">120g Plain Flour</li>
+                                <li class="p-1 bg-info rounded-2 text-black m-2">120g Plain Flour</li>
+                              </ul>
+                              <h3>Tags : </h3>
+                              <ul class="d-flex list-unstyled flex-wrap">
+                                <li class="p-1 bg-danger rounded-2 text-black m-2">Pudding</li>
+                              </ul>
+                              <button class="btn btn-success"><a href="#"></a></button>
+                              <button class="btn btn-danger">Youtube</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div> -->
+            </div>
+        </div>
+    </main> 
+    <div class="loading position-fixed w-100 h-100 top-0 start-0 bg-dark d-flex align-items-center justify-content-center d-none bg-opacity-50">
+        <span class="loader"></span>
+    </div>
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/jquery-3.6.3.min.js"></script>
+    <script src="./JS/index.js"></script>
+</body>
+</html>
